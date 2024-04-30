@@ -1,30 +1,16 @@
-<mxfile host="app.diagrams.net" modified="2024-04-30T07:22:24.720Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="wjoPoz-6YcZy_yLRMOaM" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-30T09:18:27.080Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="RC30vobjZQp5feMIE0vP" version="24.3.1" type="github">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
-    <mxGraphModel dx="1259" dy="1066" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1669" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-1" value=":Object" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
-          <mxGeometry x="40" y="40" width="100" height="300" as="geometry" />
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-5" value="&lt;div&gt;:Computer&lt;/div&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="220" y="40" width="100" height="430" as="geometry" />
         </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="aM9ryv3xv72pqoxQDRHE-1">
-          <mxGeometry x="45" y="70" width="10" height="190" as="geometry" />
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-6" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="aM9ryv3xv72pqoxQDRHE-5" vertex="1">
+          <mxGeometry x="45" y="80" width="10" height="330" as="geometry" />
         </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-3" value="dispatch" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="aM9ryv3xv72pqoxQDRHE-1" target="aM9ryv3xv72pqoxQDRHE-2">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-15" y="70" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-4" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="aM9ryv3xv72pqoxQDRHE-1">
-          <mxGeometry x="50" y="120" width="10" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-5" value=":Object" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
-          <mxGeometry x="220" y="40" width="100" height="300" as="geometry" />
-        </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-6" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="aM9ryv3xv72pqoxQDRHE-5">
-          <mxGeometry x="45" y="80" width="10" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-7" value="dispatch" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="aM9ryv3xv72pqoxQDRHE-2" target="aM9ryv3xv72pqoxQDRHE-6">
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-7" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;LogIn as Agency&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="aM9ryv3xv72pqoxQDRHE-2" target="aM9ryv3xv72pqoxQDRHE-6" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="195" y="130" as="sourcePoint" />
             <Array as="points">
@@ -32,29 +18,200 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-8" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="aM9ryv3xv72pqoxQDRHE-6" target="aM9ryv3xv72pqoxQDRHE-2">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="195" y="205" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="190" y="280" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-9" value="callback" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="aM9ryv3xv72pqoxQDRHE-6" target="aM9ryv3xv72pqoxQDRHE-4">
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-9" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Display Agency Menu&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="aM9ryv3xv72pqoxQDRHE-6" target="aM9ryv3xv72pqoxQDRHE-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="175" y="160" as="sourcePoint" />
             <Array as="points">
+              <mxPoint x="60" y="140" />
               <mxPoint x="190" y="160" />
+            </Array>
+            <mxPoint x="-40" y="159.99999999999994" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-6" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1" target="IGTpVywdScjhedYOJICQ-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-55" y="470" as="sourcePoint" />
+            <mxPoint x="-60" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-5" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-70" width="540" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-1" value="&lt;div&gt;Agency&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="IGTpVywdScjhedYOJICQ-5">
+          <mxGeometry y="21.42857142857143" width="30" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="IGTpVywdScjhedYOJICQ-5" vertex="1">
+          <mxGeometry x="10" y="117.85714285714286" width="10" height="332.1428571428572" as="geometry" />
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-55" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="IGTpVywdScjhedYOJICQ-5">
+          <mxGeometry x="-110" y="140" width="650" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-8" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-50" y="160.00043478260875" as="sourcePoint" />
+            <mxPoint x="265" y="160.00043478260875" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-9" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Click on Analyze air quality around air cleaner&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IGTpVywdScjhedYOJICQ-8">
+          <mxGeometry x="0.154" y="2" relative="1" as="geometry">
+            <mxPoint x="-22" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-14" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;" edge="1" parent="1" source="aM9ryv3xv72pqoxQDRHE-2" target="aM9ryv3xv72pqoxQDRHE-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="200" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="160" y="200" />
+              <mxPoint x="110" y="220" />
+              <mxPoint x="160" y="200" />
+              <mxPoint x="110" y="200" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-10" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="aM9ryv3xv72pqoxQDRHE-4" target="aM9ryv3xv72pqoxQDRHE-6">
+        <mxCell id="IGTpVywdScjhedYOJICQ-15" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Enter area and period to analyze (AirCleanerID, periodOfTime)&lt;br&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IGTpVywdScjhedYOJICQ-14">
+          <mxGeometry x="0.0835" relative="1" as="geometry">
+            <mxPoint x="-13" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-18" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="175" y="235" as="targetPoint" />
+            <mxPoint x="265" y="280.0030434782609" as="sourcePoint" />
+            <mxPoint x="-50" y="280.0030434782609" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-19" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Display air quality of sensors around &lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IGTpVywdScjhedYOJICQ-18">
+          <mxGeometry x="-0.1127" y="-2" relative="1" as="geometry">
+            <mxPoint x="-15" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-22" value="Scenario 1 : Identify areas of good air quality using a sensor around air cleaners" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-23" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-50" y="360" as="sourcePoint" />
+            <mxPoint x="265" y="360" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="180" y="230" />
+              <mxPoint x="160" y="360" />
+              <mxPoint x="140" y="330" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-37" value="Enter sensor (SensorID)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IGTpVywdScjhedYOJICQ-23">
+          <mxGeometry x="0.0186" y="1" relative="1" as="geometry">
+            <mxPoint y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-28" value="&lt;div&gt;:dataset&lt;/div&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="410" y="30" width="100" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-29" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="IGTpVywdScjhedYOJICQ-28">
+          <mxGeometry x="45" y="200" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-40" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="IGTpVywdScjhedYOJICQ-28">
+          <mxGeometry x="45" y="339.43" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-45" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;" edge="1" parent="IGTpVywdScjhedYOJICQ-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-135" y="339.43285714285713" as="sourcePoint" />
+            <mxPoint x="45" y="339.43285714285713" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-46" value="&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Access data from similar sensors&lt;/font&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IGTpVywdScjhedYOJICQ-45">
+          <mxGeometry x="-0.2673" relative="1" as="geometry">
+            <mxPoint x="28" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-47" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;dashed=1;" edge="1" parent="IGTpVywdScjhedYOJICQ-28" source="IGTpVywdScjhedYOJICQ-40">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="35" y="369.46571428571434" as="sourcePoint" />
+            <mxPoint x="-135" y="369.43" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-80" y="369.43" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-48" value="Return data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IGTpVywdScjhedYOJICQ-47">
+          <mxGeometry x="-0.181" y="2" relative="1" as="geometry">
+            <mxPoint x="-11" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-30" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275.0000000000002" y="230" as="sourcePoint" />
+            <mxPoint x="455" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-31" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Access data from sensors around AirCleaner&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IGTpVywdScjhedYOJICQ-30">
+          <mxGeometry x="-0.2673" relative="1" as="geometry">
+            <mxPoint x="28" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-32" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="455" y="259.9971428571429" as="sourcePoint" />
+            <mxPoint x="275" y="259.9971428571429" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-33" value="Return data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IGTpVywdScjhedYOJICQ-32">
+          <mxGeometry x="-0.181" y="2" relative="1" as="geometry">
+            <mxPoint x="-11" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-34" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Display Agency Menu&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="265" y="300" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="60" y="300" />
+              <mxPoint x="190" y="320" />
+            </Array>
+            <mxPoint x="-50" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-35" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-50" y="320.00043478260875" as="sourcePoint" />
+            <mxPoint x="265" y="320.00043478260875" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-36" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Click on Identify areas with similar air qualities&lt;br&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IGTpVywdScjhedYOJICQ-35">
+          <mxGeometry x="0.154" y="2" relative="1" as="geometry">
+            <mxPoint x="-22" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-38" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Display request of information&lt;br&gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="265" y="340" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="60" y="340" />
+              <mxPoint x="190" y="360" />
+            </Array>
+            <mxPoint x="-50" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-39" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Display request of information&lt;br&gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="265" y="180" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="60" y="180" />
+              <mxPoint x="190" y="200" />
+            </Array>
+            <mxPoint x="-50" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-50" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="265" y="410.0030434782609" as="sourcePoint" />
+            <mxPoint x="-50" y="410.0030434782609" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-51" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Display area and data of similar sensors &lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IGTpVywdScjhedYOJICQ-50">
+          <mxGeometry x="-0.1127" y="-2" relative="1" as="geometry">
+            <mxPoint x="-15" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGTpVywdScjhedYOJICQ-57" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Loop while air quality not good enough&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="140" width="110" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
