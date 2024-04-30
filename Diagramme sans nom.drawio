@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-30T09:41:41.639Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="w3_dOMtxMpvUn3lzN_kG" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-30T09:42:50.282Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="PfH3J3f2Ot-rH2GHShR5" version="24.3.1" type="github">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
-    <mxGraphModel dx="1502" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1874" dy="533" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -441,7 +441,7 @@
         <mxCell id="IGTpVywdScjhedYOJICQ-147" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="IGTpVywdScjhedYOJICQ-146">
           <mxGeometry x="45" y="80" width="10" height="330" as="geometry" />
         </mxCell>
-        <mxCell id="IGTpVywdScjhedYOJICQ-148" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;LogIn as Agency&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="IGTpVywdScjhedYOJICQ-153" target="IGTpVywdScjhedYOJICQ-147">
+        <mxCell id="IGTpVywdScjhedYOJICQ-148" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;LogIn as Provider&lt;br&gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="IGTpVywdScjhedYOJICQ-153" target="IGTpVywdScjhedYOJICQ-147">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="175" y="1120" as="sourcePoint" />
             <Array as="points">
@@ -449,7 +449,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="IGTpVywdScjhedYOJICQ-149" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Display Agency Menu&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="IGTpVywdScjhedYOJICQ-147" target="IGTpVywdScjhedYOJICQ-153">
+        <mxCell id="IGTpVywdScjhedYOJICQ-149" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Display Provider Menu&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="IGTpVywdScjhedYOJICQ-147" target="IGTpVywdScjhedYOJICQ-153">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="155" y="1150" as="sourcePoint" />
             <Array as="points">
@@ -598,7 +598,7 @@
             <mxPoint x="245" y="1150.0004347826089" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="IGTpVywdScjhedYOJICQ-174" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Click on Analyze private individual&#39;s sensor&lt;br&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IGTpVywdScjhedYOJICQ-173">
+        <mxCell id="IGTpVywdScjhedYOJICQ-174" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Click on Analyze air quality around air cleaner&lt;br&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IGTpVywdScjhedYOJICQ-173">
           <mxGeometry x="0.154" y="2" relative="1" as="geometry">
             <mxPoint x="-22" y="-8" as="offset" />
           </mxGeometry>
@@ -614,7 +614,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="IGTpVywdScjhedYOJICQ-176" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Enter individual to check (UserID)&lt;br&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IGTpVywdScjhedYOJICQ-175">
+        <mxCell id="IGTpVywdScjhedYOJICQ-176" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Enter individual to check (AirCleanerID)&lt;br&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IGTpVywdScjhedYOJICQ-175">
           <mxGeometry x="0.0835" relative="1" as="geometry">
             <mxPoint x="-13" y="-10" as="offset" />
           </mxGeometry>
