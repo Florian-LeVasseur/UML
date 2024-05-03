@@ -5,9 +5,24 @@
 package View {
 
 class View {
-+ {method} choixRole () : Int 
++ {method} menu() : Int 
 
-+ {method }
++ {method} choiceSensor(List<Sensor>) : Sensor 
+
++ {method} choicePosition() : List<Float>
+
++ {method} choiceMoment() : Timestamp
+
++ {method} printDataPrivateIndiv (List<Sensor>) : void
+
++ {method} printMeanCicle(Float) : void
+
++ {method} printExcludeIndividual (PrivateIndividual) : void
+
++ {method} printPoints(Int points) : void
+
++ {method} printQualityCloseSensor(List<Sensor>) : void
+
 }
 
   
@@ -15,14 +30,8 @@ class View {
 
 package Controler {
 
-class ServiceUser{
+class Controler {
 
-+ {method} authentification (String email, String password) : User
-
-}
-
-
-class ServiceGovernment{
 + {method} askDataPrivateIndiv (PrivateIndividual individual) : List<Sensor>
 
 + {method} excludeIndividual (PrivateIndividual individual) : PrivateIndividual 
@@ -34,14 +43,14 @@ class ServiceGovernment{
 + {method} qualityCloseSensor (Sensor sensor, Timestamp start, Timestamp stop) : List<Sensor>
 
 + {method} getAirQuality (Float latitude, Float longitude, Timestamp moment) : Float
-}
 
-
-class ServicePrivateIndividual {
 + {method} askPoint () : Int
 
 +{method} askMeanSensor (Sensor sensor) : Int
+
 }
+
+
 
   
 }
@@ -170,6 +179,24 @@ class Timestamp {
 }
 
 class DataBase{
+# provider : List<Provider>
+
+# privateIndividuals : List<Provider>
+
+# sensors : List<Sensor> 
+
++{method} getProviderById(String providerId) : Provider
+
++{method} getProviderByIndex(Int i) : Provider
+
++{method} getPrivateIndividualById(String privateIndividualId) : PrivateIndividual
+
++{method} getPrivateIndividualByIndex(Int i) : PrivateIndividual
+
++{method} getSensorById(String sensorId) : Sensor
+
++{method} getSensorByIndex(Int i) : Sensor
+
 +{method} creationBD () : Boolean 
 }
   
