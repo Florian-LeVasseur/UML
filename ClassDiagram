@@ -25,9 +25,9 @@ class ServiceUser{
 class ServiceGovernment{
 + {method} PrivateIndividual excludeIndividual (PrivateIndividual individual)
 
-+ {method} Float MeanCicleMoment (long int latitude, long int longitude, Timestamp moment)
++ {method} Float MeanCircleMoment (long int latitude, long int longitude, Timestamp moment)
 
-+ {method} Float MeanCiclePeriod (long int latitude, long int longitude, Timestamp start, Timestamp stop)
++ {method} Float MeanCirclePeriod (long int latitude, long int longitude, Timestamp start, Timestamp stop)
 
 + {method} ??? QualityCloseSensor (Sensor sensor, Timestamp start, Timestamp stop)
 
