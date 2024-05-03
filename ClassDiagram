@@ -3,6 +3,13 @@
 @startuml 
 
 package View {
+
+class View {
++ {method} choixRole () : Int 
+
++ {method }
+}
+
   
 }
 
@@ -10,33 +17,30 @@ package Controler {
 
 class ServiceUser{
 
-+ {method} User authentification (String email, String password)
++ {method} authentification (String email, String password) : User
 
-+ {method} List<int> statMoment (Timestamp moment)
-
-+ {method} List<int> statPeriod (Timestamp start, Timestamp end) 
-
-+ {method} Int quality (Timestamp moment, Int longitude, Int latitude)
-
-+ {method} List<int> zoneSimilaire (Timestamp start, Timestamp end, Sensor sensor)
 }
 
 
 class ServiceGovernment{
-+ {method} PrivateIndividual excludeIndividual (PrivateIndividual individual)
++ {method} askDataPrivateIndiv (PrivateIndividual individual) : List<Sensor>
 
-+ {method} Float MeanCircleMoment (long int latitude, long int longitude, Timestamp moment)
++ {method} excludeIndividual (PrivateIndividual individual) : PrivateIndividual 
 
-+ {method} Float MeanCirclePeriod (long int latitude, long int longitude, Timestamp start, Timestamp stop)
++ {method} meanCicleMoment (Float latitude, Float longitude, Timestamp moment) : Float
 
-+ {method} ??? QualityCloseSensor (Sensor sensor, Timestamp start, Timestamp stop)
++ {method} meanCiclePeriod (Float latitude, Float longitude, Timestamp start, Timestamp stop) : Float 
 
-+ {method} Float GetAirQuality (long int latitude, long int longitude, Timestamp moment)
++ {method} qualityCloseSensor (Sensor sensor, Timestamp start, Timestamp stop) : List<Sensor>
+
++ {method} getAirQuality (Float latitude, Float longitude, Timestamp moment) : Float
 }
 
 
 class ServicePrivateIndividual {
-+ {method} Int askPoint ()
++ {method} askPoint () : Int
+
++{method} askMeanSensor (Sensor sensor) : Int
 }
 
   
@@ -76,15 +80,15 @@ class Sensor{
 
 # sensorId : String 
  
-# longitude : LongFloat
+# longitude : Float
 
-#latitude : LongFloat
+#latitude : Float
 
 +{method} getSensorId() : String
 
-+{method} getLongitude() : LongFloat
++{method} getLongitude() : Float
 
-+{method} getLatitude() : LongFloat
++{method} getLatitude() : Float
 }
 
 class Measurement {
@@ -127,9 +131,9 @@ class Cleaner {
 
 +{method} getCleanerId() : String
 
-+{method} getLatitude() : LongFloat
++{method} getLatitude() : Float
 
-+{method} getLongititude() : LongFloat
++{method} getLongititude() : Float
 
 +{method} getTimestampStart() : Timestamp
 
@@ -143,9 +147,13 @@ class PrivateIndividual {
 
  #fidelityPoint : Int
 
+#reliable : Boolean
+
 +{method} getPrivateIndividualId() : String
 
 +{method} getFidelityPoint() : Int
+
++{method} getReliable() : Boolean
 
 } 
 
@@ -162,7 +170,7 @@ class Timestamp {
 }
 
 class DataBase{
-+{method} creationBD : Boolean ????????
++{method} creationBD () : Boolean 
 }
   
 }
