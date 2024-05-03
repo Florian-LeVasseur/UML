@@ -1,0 +1,202 @@
+ 
+
+@startuml 
+
+package View {
+  
+}
+
+package Controler {
+
+class ServiceUser{
+
++ {method} User authentification (String email, String password)
+
++ {method} List<int> statMoment (Timestamp moment)
+
++ {method} List<int> statPeriod (Timestamp start, Timestamp end) 
+
++ {method} Int quality (Timestamp moment, Int longitude, Int latitude)
+
++ {method} List<int> zoneSimilaire (Timestamp start, Timestamp end, Sensor sensor)
+}
+
+
+class ServiceGovernment{
++ {method} PrivateIndividual excludeIndividual (PrivateIndividual individual)
+
++ {method} Float MeanCicleMoment (long int latitude, long int longitude, Timestamp moment)
+
++ {method} Float MeanCiclePeriod (long int latitude, long int longitude, Timestamp start, Timestamp stop)
+
++ {method} ??? QualityCloseSensor (Sensor sensor, Timestamp start, Timestamp stop)
+
++ {method} Float GetAirQuality (long int latitude, long int longitude, Timestamp moment)
+}
+
+
+class ServicePrivateIndividual {
++ {method} Int askPoint ()
+}
+
+  
+}
+
+package Model {
+
+
+class Government { 
+
+} 
+
+
+class User { 
+
+  # login : String
+
+  # password : String  
+
++ {method} getLogin() : String
+
++ {method} getPassword() : String
+
+} 
+
+class Provider { 
+ 
+# providerId : String
+
++ {method} getProviderId() : String
+
+}
+
+
+
+class Sensor{
+
+# sensorId : String 
+ 
+# longitude : LongFloat
+
+#latitude : LongFloat
+
++{method} getSensorId() : String
+
++{method} getLongitude() : LongFloat
+
++{method} getLatitude() : LongFloat
+}
+
+class Measurement {
+ #time : Timestamp
+
+ #value : Float 
+
++{method} getTime() : Timestamp
+
++{method} getValue() : Float
+}
+
+class Attribute {
+#attributeId : String
+
+#unit : String
+
+#desciption : String
+
++{method} getAttributeId() : String
+
++{method} getUnit() : String
+
++{method} getDescription() : String
+
+}
+
+class Cleaner {
+
+#cleanerId : String
+
+#latitude : LongFloat
+
+#longitude : Int
+
+#timestampStart : Timestamp
+
+#timestampStop : Timestamp
+
+
++{method} getCleanerId() : String
+
++{method} getLatitude() : LongFloat
+
++{method} getLongititude() : LongFloat
+
++{method} getTimestampStart() : Timestamp
+
++{method} getTimestampStop() : Timestamp
+} 
+
+
+
+class PrivateIndividual { 
+#privateIndividualId : String
+
+ #fidelityPoint : Int
+
++{method} getPrivateIndividualId() : String
+
++{method} getFidelityPoint() : Int
+
+} 
+
+  
+
+class Timestamp {
+#day : String
+
+#time : String
+
++{method} getDay() : String
+
++{method} getTime() : String
+}
+
+class DataBase{
++{method} creationBD : Boolean ????????
+}
+  
+}
+
+
+  
+
+
+
+
+  
+
+
+
+
+@enduml 
+
+  
+
+@startuml 
+
+User <|-- Provider : Héritage 
+
+User <|-- Government : Héritage 
+
+User <|-- PrivateIndividual : Héritage 
+
+Measurement "*" --> "1" Attribute 
+
+Measurement "*" <-- "1" Sensor 
+
+Provider "1" --> "*" Cleaner 
+
+PrivateIndividual "1" --> "*" Sensor 
+
+@enduml 
+
