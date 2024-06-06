@@ -10,8 +10,7 @@ int main(){
     
     Controler controler;
    
-    controler.createDb();
-     return 0;
+    controler.createDb(); 
     controler.getDb()->GetSensors()[0].AfficherSensor();
     
     while (Action!=0)
@@ -157,6 +156,7 @@ int main(){
         }
     cout<<endl<<endl;
     }
+    return 0; 
 }
 
 

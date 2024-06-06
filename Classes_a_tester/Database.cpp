@@ -98,7 +98,7 @@ ifstream fic ( nomFichierSensor );
         string sensor;
         // Lire le fichier ligne par ligne jusqu'à la fin du fichier
         while (getline(fic, sensor)) {
-            Sensor maligne(sensor);
+            Sensor maligne(sensor); // ????-------------------------------------
             maligne.AnalyserSensor();
             maligne.AfficherSensor();
             sensors.push_back(maligne);
