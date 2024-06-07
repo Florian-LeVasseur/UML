@@ -36,29 +36,12 @@ float Sensor::GetLongitude(){
     return longitude;
 }
 
-vector<Measurement> Sensor::GetMeasurements(){ 
-    return measures;
-}
-
 
 void Sensor::AfficherSensor(){
     cout << "SensorID : " << sensorID << endl;
     cout << "Latitude : " << latitude << endl;
     cout << "Longitude : " << longitude << endl;
 }
-
-
-void Sensor::InitMeasureSensor(){
-    vector<Measurement> measure = Database::GetMeasurements(); 
-    for(unsigned int i = 0; i < measure.size(); i++) 
-    {
-        if (measure[i].GetSensorID() == this.sensorID) 
-        {
-            this.measures.push_back(measure[i]); 
-        }
-    }
-}
-
 
 
 //------------------------------------------------- Surcharge d'opérateurs

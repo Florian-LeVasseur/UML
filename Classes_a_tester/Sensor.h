@@ -37,8 +37,7 @@ public:
 string GetSensorID();
 float GetLatitude();
 float GetLongitude();
-vector<Measurement> GetMeasurements();
-void InitMeasureSensor(); 
+
 
 void AfficherSensor();
 
@@ -78,7 +77,6 @@ protected:
 string sensorID;
 float latitude;
 float longitude;
-vector<Measurement> measures; 
 
 };
 
