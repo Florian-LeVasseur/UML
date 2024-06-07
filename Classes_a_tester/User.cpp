@@ -39,7 +39,17 @@ string User::getPassword()const{
 
 
 //-------------------------------------------- Constructeurs - destructeur
+User::User ( const User & unUser )
+// Algorithme :
+//
+{
+#ifdef MAP
+    cout << "Appel au constructeur de copie de <User>" << endl;
+#endif
+login = unUser.login;
+password = unUser.password;
 
+} //----- Fin de User (constructeur de copie)
 User::User (string log, string pwd): login(log), password(pwd)
 // Algorithme :
 //

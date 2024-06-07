@@ -11,7 +11,6 @@ int main(){
     Controler controler;
    
     controler.createDb(); 
-    controler.getDb()->GetSensors()[0].AfficherSensor();
     
     while (Action!=0)
     {

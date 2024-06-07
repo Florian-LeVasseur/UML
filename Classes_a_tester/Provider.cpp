@@ -45,6 +45,17 @@ void Provider::AfficherProvider(){
 }
 
 //-------------------------------------------- Constructeurs - destructeur
+Provider::Provider ( const Provider & unProvider )
+// Algorithme :
+//
+{
+#ifdef MAP
+    cout << "Appel au constructeur de copie de <Provider>" << endl;
+#endif
+
+providerID = unProvider.providerID;
+cleanerID = unProvider.cleanerID;
+} //----- Fin de Provider (constructeur de copie)
 
 
 Provider::Provider (string log,string pwd,string id):User(log,pwd), providerID(id)

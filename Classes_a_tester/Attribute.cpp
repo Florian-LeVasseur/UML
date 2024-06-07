@@ -60,6 +60,10 @@ Attribute::Attribute ( const Attribute & unAttribute )
 #ifdef MAP
     cout << "Appel au constructeur de copie de <Attribute>" << endl;
 #endif
+
+attributeID = unAttribute.attributeID;
+unit = unAttribute.unit;
+description = unAttribute.description;
 } //----- Fin de Attribute (constructeur de copie)
 
 

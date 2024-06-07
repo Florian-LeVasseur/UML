@@ -43,6 +43,8 @@ public:
     bool getReliability();
 //-------------------------------------------- Constructeurs - destructeur
 
+    PrivateIndividual (const PrivateIndividual & unPrivateIndividual);
+
     PrivateIndividual (string UnPrivateIndividual);
     // Mode d'emploi :
     //
