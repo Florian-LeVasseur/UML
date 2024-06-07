@@ -110,7 +110,7 @@ ifstream fichi ( nomFichierAttribute );
     if (fichi.is_open()) {
         string maligne;
         // Lire le fichier ligne par ligne jusqu'à la fin du fichier
-        while (getline(fic, maligne)) {
+        while (getline(fichi, maligne)) {
             Attribute attribute(maligne);
             attributes.push_back(attribute);
         }
@@ -126,7 +126,7 @@ ifstream fichie ( nomFichierCleaner );
     if (fichie.is_open()) {
         string maligne;
         // Lire le fichier ligne par ligne jusqu'à la fin du fichier
-        while (getline(fic, maligne)) {
+        while (getline(fichie, maligne)) {
             Cleaner cleaner(maligne);
             cleaners.push_back(cleaner);
         }
@@ -142,8 +142,10 @@ ifstream fichier ( nomFichierUser );
     if (fichier.is_open()) {
         string maligne;
         // Lire le fichier ligne par ligne jusqu'à la fin du fichier
-        while (getline(fic, maligne)) {
+        while (getline(fichier, maligne)) {
             PrivateIndividual privateIndiv(maligne);
+            cout<< "UserID : "<<privateIndiv.GetUserID()<<endl;
+            privateIndiv.AfficherPrivateIndividual();
             privateIndivs.push_back(privateIndiv);
         }
         // Fermer le fichier après la Database
@@ -158,7 +160,7 @@ ifstream fichiers ( nomFichierProvider );
     if (fichiers.is_open()) {
         string maligne;
         // Lire le fichier ligne par ligne jusqu'à la fin du fichier
-        while (getline(fic, maligne)) {
+        while (getline(fichiers, maligne)) {
             Provider provider(maligne);
             providers.push_back(provider);
         }

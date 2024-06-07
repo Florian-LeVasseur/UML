@@ -11,6 +11,7 @@ int main(){
     Controler controler;
    
     controler.createDb(); 
+    controler.getDb()->GetSensors()[0].AfficherSensor();
     
     while (Action!=0)
     {
@@ -69,14 +70,15 @@ int main(){
                 }
                 case 5: { //malicious personal user
                     string indivId; 
-                    cout<<"Choice : analyze the efficiency of an air cleaner"<<endl; 
+                    cout<<"Choice : MALICIOUS"<<endl; 
                     cout<<"Enter the individual ID : "; 
                     cin >> indivId; 
 
-                    vector <Measurement> privateMeasure = Controler::SensorDataPrivateUser(string UserId); 
+                    vector <Measurement> privateMeasure = controler.SensorDataPrivateUser(indivId); 
                     if (! privateMeasure.empty())
                     {
-                        cout<<privateMeasure<<endl; 
+                        for (int i = 0 ; i < privateMeasure.size() ; i++)
+                            privateMeasure[i].AfficherMeasurement(); 
                     }
                     else
                     {

@@ -30,7 +30,6 @@ class GovAgency : public User
 public:
 //----------------------------------------------------- Méthodes publiques
 
-    Vector <Measurement> dataSensorUser ( int idUser );
     // Mode d'emploi :
     //
     // Contrat :

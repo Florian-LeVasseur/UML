@@ -12,6 +12,7 @@
 
 //--------------------------------TRAJET------------------- Interfaces utilisées
 #include "Database.h"
+#include "Provider.h"
 //#include "TrajetCompose.h" (à mettre dans le make file aussi) + ajouter des const à son constr sur dep et arr
 //------------------------------------------------------------- Constantes
 
