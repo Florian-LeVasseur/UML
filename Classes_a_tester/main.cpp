@@ -130,18 +130,11 @@ int main(){
                 switch(ActionProvider){
                 
                 case 0: {   // Quitter
+                    cout<<"Deconnexion"<<endl; 
                     break;
                 }
                 case 1: {   // 
-                    
-                    break;
-                }
-                case 2:{    // 
-                    
-                    break;
-                }
-                case 3: {   // 
-
+                    cout<<"Choice : Analyze air quality around air cleaner"<<endl; 
                     break;
                 }
                 default: {  // Si la saisie n'est pas correcte
@@ -170,16 +163,17 @@ int main(){
                 switch(ActionPrivateIndividual){
                 
                 case 0: {   // Quitter
-                
+                    cout<<"Deconnexion"<<endl; 
                     break;
                 }
                 case 1: {   // 
-                    
+                    cout << "Choice : Afficher données de ses capteurs "<<endl; 
                     break;
                 }
                 case 2:{    // 
                     //int points = controler.askPoint();
                     //cout<<"Vous avez "<<points<<" points de fidélité."<<endl;
+                    cout << "Choice : Afficher points de fidélité"<<endl; 
                     break;
                 }
                 default: {  // Si la saisie n'est pas correcte
