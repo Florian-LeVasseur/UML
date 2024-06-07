@@ -16,6 +16,7 @@ using namespace std;
 #include <string>
 //------------------------------------------------------ Include personnel
 #include "Sensor.h"
+#include "Database.h"
 
 
 //------------------------------------------------------------- Constantes
@@ -41,11 +42,18 @@ void Sensor::AfficherSensor(){
     cout << "Longitude : " << longitude << endl;
 }
 
-// type Sensor::Méthode ( liste des paramètres )
-// Algorithme :
-//
-//{
-//} //----- Fin de Méthode
+
+void Sensor::InitMeasureSensor(){
+    vector<Measurement> measure = Database::GetMeasurements(); 
+    for(unsigned int i = 0; i < measure.size(); i++) 
+    {
+        if (measure[i].GetSensorID() == this.sensorID) 
+        {
+            this.measures.push_back(measure[i]); 
+        }
+    }
+}
+
 
 
 //------------------------------------------------- Surcharge d'opérateurs

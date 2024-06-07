@@ -29,6 +29,11 @@ using namespace std;
 //} //----- Fin de Méthode
 void Controler::createDb(){
     db = new Database("./DataBase/sensors.csv", "./DataBase/measurements.csv", "./DataBase/attributes.csv", "./DataBase/cleaners.csv", "./DataBase/users.csv", "./DataBase/providers.csv");
+    vector<Sensor> psensors = Database::GetSensors()
+    for (int i=0; i<psensors.size(); i++)
+    {
+        psensors[i].InitMeasureSensor(); 
+    }
 }
 
 Database* Controler::getDb(){

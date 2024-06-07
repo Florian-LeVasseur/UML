@@ -13,6 +13,8 @@
 
 //--------------------------------------------------- Interfaces utilisées
 #include <string>
+#include <vector>
+#include "Measurement.h"
 using namespace std;
 
 //------------------------------------------------------------- Constantes
@@ -35,6 +37,7 @@ public:
 string GetSensorID();
 float GetLatitude();
 float GetLongitude();
+void InitMeasureSensor(); 
 
 void AfficherSensor();
 
@@ -74,6 +77,7 @@ protected:
 string sensorID;
 float latitude;
 float longitude;
+vector<Measurement> measures; 
 
 };
 
