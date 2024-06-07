@@ -100,6 +100,7 @@ Controler::~Controler ()
 #ifdef MAP
     cout << "Appel au destructeur de <Controler>" << endl;
 #endif
+delete db;
 } //----- Fin de ~Controler
 
 

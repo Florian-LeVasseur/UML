@@ -38,7 +38,8 @@ public:
 
 //-------------------------------------------- Constructeurs - destructeur
 
-    
+    User (const User & unUser );
+
     User (string log, string pwd);
     // Mode d'emploi :
     //

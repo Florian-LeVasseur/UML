@@ -16,6 +16,7 @@ using namespace std;
 #include <fstream>
 #include <string>
 #include <vector>
+#include <algorithm>
 //------------------------------------------------------ Include personnel
 #include "Database.h"
 
@@ -51,27 +52,6 @@ vector<Provider> Database::GetProviders(){
 }
 
 
-/*void Database::AfficherTableau(int debut, int fin){
-    int i = debut-1 ;
-    for(i;i<fin;i++){
-        Ligne a = tableau[i];
-        a.AnalyserLigne();
-        cout << "Voici la " << i+1 << "ieme ligne du fichier" << endl;
-        a.AfficherLigne();
-    }
-
-} */
-
-// type Database::Méthode ( liste des paramètres )
-// Algorithme :
-//
-//{
-//} //----- Fin de Méthode
-
-
-//------------------------------------------------- Surcharge d'opérateurs
-
-
 
 //-------------------------------------------- Constructeurs - destructeur
 Database::Database ( const Database & unDatabase )
@@ -100,6 +80,7 @@ ifstream fic ( nomFichierSensor );
         while (getline(fic, maligne)) {
             Sensor sensor(maligne);
             sensors.push_back(sensor);
+            sensor.AfficherSensor();
         }
         // Fermer le fichier après la Database
         fic.close();

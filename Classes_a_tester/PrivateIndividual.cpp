@@ -51,7 +51,19 @@ void PrivateIndividual::AfficherPrivateIndividual(){
     cout << "SensorID : " << sensorID << endl;
 }
 //-------------------------------------------- Constructeurs - destructeur
+PrivateIndividual::PrivateIndividual ( const PrivateIndividual & unPrivateIndividual )
+// Algorithme :
+//
+{
+#ifdef MAP
+    cout << "Appel au constructeur de copie de <PrivateIndividual>" << endl;
+#endif
 
+userID = unPrivateIndividual.userID;
+sensorID = unPrivateIndividual.sensorID;
+fidelityPoints = unPrivateIndividual.fidelityPoints;
+reliability = unPrivateIndividual.reliability;
+} //----- Fin de PrivateIndividual (constructeur de copie)
 
 PrivateIndividual::PrivateIndividual (string OnePrivateIndividual): User()
 // Algorithme :

@@ -39,6 +39,9 @@ public:
 
     void AfficherProvider();
 //-------------------------------------------- Constructeurs - destructeur
+    
+    Provider (const Provider & unProvider);
+    
     Provider (string log, string pwd, string id);
     // Mode d'emploi :
     //
