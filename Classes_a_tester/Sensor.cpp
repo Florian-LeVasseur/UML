@@ -36,6 +36,11 @@ float Sensor::GetLongitude(){
     return longitude;
 }
 
+vector<Measurement> Sensor::GetMeasurements(){ 
+    return measures;
+}
+
+
 void Sensor::AfficherSensor(){
     cout << "SensorID : " << sensorID << endl;
     cout << "Latitude : " << latitude << endl;

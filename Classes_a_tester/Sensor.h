@@ -37,6 +37,7 @@ public:
 string GetSensorID();
 float GetLatitude();
 float GetLongitude();
+vector<Measurement> GetMeasurements();
 void InitMeasureSensor(); 
 
 void AfficherSensor();
