@@ -80,11 +80,6 @@ int main(){
                         for (int i = 0 ; i < privateMeasure.size() ; i++)
                             privateMeasure[i].AfficherMeasurement(); 
                     }
-                    else
-                    {
-                        cout<<"No measure for this private sensor"<<endl; 
-                    }
-                    
                     break; 
                 }
 
