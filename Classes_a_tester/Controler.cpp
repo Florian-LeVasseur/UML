@@ -59,7 +59,7 @@ vector <Measurement> Controler::SensorDataPrivateUser(string UserId)
                 mesures.push_back(allMeasures[i]); 
             }
         }
-        if (privateMeasure.empty()) cout<<"No measure for this private sensor"<<endl; 
+        if (mesures.empty()) cout<<"No measure for this private sensor"<<endl; 
     } 
     return mesures; 
 }
