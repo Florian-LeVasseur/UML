@@ -31,13 +31,11 @@ class Measurement
 
 public:
 //----------------------------------------------------- Méthodes publiques
-string GetMeasurement();
 string GetTimestamp();
 string GetSensorID();
 string GetAttributeID();
 string GetValue();
 
-void AnalyserMeasurement();
 void AfficherMeasurement();
 
 //------------------------------------------------- Surcharge d'opérateurs
@@ -54,7 +52,7 @@ void AfficherMeasurement();
     // Contrat :
     //
 
-    Measurement (string nomFichier);
+    Measurement (string OneMeasurement);
     // Mode d'emploi :
     //
     // Contrat :
@@ -77,8 +75,6 @@ string timestamp;
 string sensorID;
 string attributeID;
 string value;
-
-string measurement;
 
 
 };

@@ -24,10 +24,6 @@ using namespace std;
 
 //----------------------------------------------------- Méthodes publiques
 
-string Measurement::GetMeasurement(){
-    return measurement;
-}
-
 string Measurement::GetTimestamp(){
     return timestamp;
 }
@@ -41,28 +37,6 @@ string Measurement::GetAttributeID(){
 }
 string Measurement::GetValue(){
     return value;
-}
-
-void Measurement::AnalyserMeasurement(){
-
-    // Séparation de la chaine Measurement en sous-chaînes
-    size_t debutDate = 0;
-    size_t finDate = measurement.find_first_of(';');
-
-    size_t debutSensorID = finDate + 1;
-    size_t finSensorID = measurement.find(';', debutSensorID);
-
-    size_t debutAttributeID = finSensorID + 1;
-    size_t finAttributeID = measurement.find(';',debutAttributeID);
-
-    size_t debutValue= finAttributeID + 1;
-    size_t finValue = measurement.find_last_of(';');
-
-    // Extraction des sous-chaînes
-    timestamp = measurement.substr(debutDate, finDate - debutDate);
-    sensorID = measurement.substr(debutSensorID, finSensorID - debutSensorID);
-    attributeID = measurement.substr(debutAttributeID, finAttributeID - debutAttributeID);
-    value = measurement.substr(debutValue, finValue - debutValue);
 }
 
 void Measurement::AfficherMeasurement(){
@@ -94,13 +68,31 @@ Measurement::Measurement ( const Measurement & unMeasurement )
 } //----- Fin de Measurement (constructeur de copie)
 
 
-Measurement::Measurement ( string nomFichier)
+Measurement::Measurement ( string OneMeasurement)
 // Algorithme :
 //
 {
 #ifdef MAP
     cout << "Appel au constructeur de <Measurement>" << endl;
 #endif
+// Séparation de la chaine Measurement en sous-chaînes
+    size_t debutDate = 0;
+    size_t finDate = OneMeasurement.find_first_of(';');
+
+    size_t debutSensorID = finDate + 1;
+    size_t finSensorID = OneMeasurement.find(';', debutSensorID);
+
+    size_t debutAttributeID = finSensorID + 1;
+    size_t finAttributeID = OneMeasurement.find(';',debutAttributeID);
+
+    size_t debutValue= finAttributeID + 1;
+    size_t finValue = OneMeasurement.find_last_of(';');
+
+    // Extraction des sous-chaînes
+    timestamp = OneMeasurement.substr(debutDate, finDate - debutDate);
+    sensorID = OneMeasurement.substr(debutSensorID, finSensorID - debutSensorID);
+    attributeID = OneMeasurement.substr(debutAttributeID, finAttributeID - debutAttributeID);
+    value = OneMeasurement.substr(debutValue, finValue - debutValue);
 } //----- Fin de Measurement
 
 

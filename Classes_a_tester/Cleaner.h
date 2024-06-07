@@ -32,14 +32,12 @@ class Cleaner
 
 public:
 //----------------------------------------------------- Méthodes publiques
-string GetCleaner();
 string GetCleanerID();
 float GetLatitude();
 float GetLongitude();
 string GetTimestampStart();
 string GetTimestampStop();
 
-void AnalyserCleaner();
 void AfficherCleaner();
 
 //------------------------------------------------- Surcharge d'opérateurs
@@ -80,8 +78,6 @@ float latitude;
 float longitude;
 string timestampStart;
 string timestampStop;
-
-string cleaner;
 
 
 };

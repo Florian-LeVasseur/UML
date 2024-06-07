@@ -23,11 +23,6 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-
-string Cleaner::GetCleaner(){
-    return cleaner;
-}
-
 string Cleaner::GetCleanerID(){
     return cleanerID;
 }
@@ -45,34 +40,6 @@ string Cleaner::GetTimestampStart(){
 
 string Cleaner::GetTimestampStop(){
     return timestampStop;
-}
-
-
-
-void Cleaner::AnalyserCleaner(){
-
-    // Séparation de la chaine Cleaner en sous-chaînes
-    size_t debutCleanerID = 0 ;
-    size_t finCleanerID = cleaner.find_first_of(';');
-
-    size_t debutLatitude = finCleanerID + 1;
-    size_t finLatitude = cleaner.find(';', debutLatitude);
-
-    size_t debutLongitude = finLatitude + 1;
-    size_t finLongitude = cleaner.find(';', debutLongitude);
-
-    size_t debutStart = finLongitude+1;
-    size_t finStart = cleaner.find(';',debutStart);
-
-    size_t debutStop = finStart+1;
-    size_t finStop = cleaner.find(';',debutStop);
-
-    // Extraction des sous-chaînes
-    cleanerID = cleaner.substr(debutCleanerID, finCleanerID - debutCleanerID);
-    latitude = stof(cleaner.substr(debutLatitude, finLatitude - debutLatitude));
-    longitude = stof(cleaner.substr(debutLongitude, finLongitude - debutLongitude));
-    timestampStart = cleaner.substr(debutStart, finStart - debutStart);
-    timestampStop = cleaner.substr(debutStop, finStop - debutStop);
 }
 
 void Cleaner::AfficherCleaner(){
@@ -105,13 +72,35 @@ Cleaner::Cleaner ( const Cleaner & unCleaner )
 } //----- Fin de Cleaner (constructeur de copie)
 
 
-Cleaner::Cleaner ( string nomFichier)
+Cleaner::Cleaner ( string OneCleaner)
 // Algorithme :
 //
 {
 #ifdef MAP
     cout << "Appel au constructeur de <Cleaner>" << endl;
 #endif
+// Séparation de la chaine Cleaner en sous-chaînes
+    size_t debutCleanerID = 0 ;
+    size_t finCleanerID = OneCleaner.find_first_of(';');
+
+    size_t debutLatitude = finCleanerID + 1;
+    size_t finLatitude = OneCleaner.find(';', debutLatitude);
+
+    size_t debutLongitude = finLatitude + 1;
+    size_t finLongitude = OneCleaner.find(';', debutLongitude);
+
+    size_t debutStart = finLongitude+1;
+    size_t finStart = OneCleaner.find(';',debutStart);
+
+    size_t debutStop = finStart+1;
+    size_t finStop = OneCleaner.find(';',debutStop);
+
+    // Extraction des sous-chaînes
+    cleanerID = OneCleaner.substr(debutCleanerID, finCleanerID - debutCleanerID);
+    latitude = stof(OneCleaner.substr(debutLatitude, finLatitude - debutLatitude));
+    longitude = stof(OneCleaner.substr(debutLongitude, finLongitude - debutLongitude));
+    timestampStart = OneCleaner.substr(debutStart, finStart - debutStart);
+    timestampStop = OneCleaner.substr(debutStop, finStop - debutStop);
 } //----- Fin de Cleaner
 
 

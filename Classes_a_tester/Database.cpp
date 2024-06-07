@@ -95,14 +95,11 @@ Database::Database (string nomFichierSensor, string nomFichierMeasurement, strin
 ifstream fic ( nomFichierSensor );
      // Vérification si l'ouverture du fichier a réussi
     if (fic.is_open()) {
-        string sensor;
+        string maligne;
         // Lire le fichier ligne par ligne jusqu'à la fin du fichier
-        while (getline(fic, sensor)) {
-            Sensor maligne(sensor); // ????-------------------------------------
-            maligne.AnalyserSensor();
-            maligne.AfficherSensor();
-            sensors.push_back(maligne);
-            cerr << maligne.GetSensor() << endl ;
+        while (getline(fic, maligne)) {
+            Sensor sensor(maligne);
+            sensors.push_back(sensor);
         }
         // Fermer le fichier après la Database
         fic.close();
@@ -114,14 +111,11 @@ ifstream fic ( nomFichierSensor );
 ifstream fich ( nomFichierMeasurement );
      // Vérification si l'ouverture du fichier a réussi
     if (fich.is_open()) {
-        string measurement;
+        string maligne;
         // Lire le fichier ligne par ligne jusqu'à la fin du fichier
-        while (getline(fich, measurement)) {
-            Measurement maligne(measurement);
-            maligne.AnalyserMeasurement();
-            maligne.AfficherMeasurement();
-            measurements.push_back(maligne);
-            cerr << maligne.GetMeasurement() << endl ;
+        while (getline(fich, maligne)) {
+            Measurement measurement(maligne);
+            measurements.push_back(measurement);
         }
         // Fermer le fichier après la Database
         fich.close();
@@ -133,14 +127,11 @@ ifstream fich ( nomFichierMeasurement );
 ifstream fichi ( nomFichierAttribute );
      // Vérification si l'ouverture du fichier a réussi
     if (fichi.is_open()) {
-        string attribute;
+        string maligne;
         // Lire le fichier ligne par ligne jusqu'à la fin du fichier
-        while (getline(fichi, attribute)) {
-            Attribute maligne(attribute);
-            maligne.AnalyserAttribute();
-            maligne.AfficherAttribute();
-            attributes.push_back(maligne);
-            cerr << maligne.GetAttribute() << endl ;
+        while (getline(fic, maligne)) {
+            Attribute attribute(maligne);
+            attributes.push_back(attribute);
         }
         // Fermer le fichier après la Database
         fichi.close();
@@ -152,14 +143,11 @@ ifstream fichi ( nomFichierAttribute );
 ifstream fichie ( nomFichierCleaner );
      // Vérification si l'ouverture du fichier a réussi
     if (fichie.is_open()) {
-        string cleaner;
+        string maligne;
         // Lire le fichier ligne par ligne jusqu'à la fin du fichier
-        while (getline(fichie, cleaner)) {
-            Cleaner maligne(cleaner);
-            maligne.AnalyserCleaner();
-            maligne.AfficherCleaner();
-            cleaners.push_back(maligne);
-            cerr << maligne.GetCleaner() << endl ;
+        while (getline(fic, maligne)) {
+            Cleaner cleaner(maligne);
+            cleaners.push_back(cleaner);
         }
         // Fermer le fichier après la Database
         fichie.close();
@@ -171,14 +159,11 @@ ifstream fichie ( nomFichierCleaner );
 ifstream fichier ( nomFichierUser );
      // Vérification si l'ouverture du fichier a réussi
     if (fichier.is_open()) {
-        string user;
+        string maligne;
         // Lire le fichier ligne par ligne jusqu'à la fin du fichier
-        while (getline(fichier, user)) {    //faut récuperer sensor id là nan ?
-            PrivateIndividual maligne(user,"toto",user);
-            maligne.AnalyserPrivateIndividual();
-            maligne.AfficherPrivateIndividual();
-            privateIndivs.push_back(maligne);
-            cerr << maligne.GetPrivateIndividual() << endl ;
+        while (getline(fic, maligne)) {
+            PrivateIndividual privateIndiv(maligne);
+            privateIndivs.push_back(privateIndiv);
         }
         // Fermer le fichier après la Database
         fichier.close();
@@ -190,14 +175,11 @@ ifstream fichier ( nomFichierUser );
 ifstream fichiers ( nomFichierProvider );
      // Vérification si l'ouverture du fichier a réussi
     if (fichiers.is_open()) {
-        string provider;
+        string maligne;
         // Lire le fichier ligne par ligne jusqu'à la fin du fichier
-        while (getline(fichiers, provider)) {
-            Provider maligne(provider);
-            maligne.AnalyserProvider();
-            maligne.AfficherProvider();
-            providers.push_back(maligne);
-            cerr << maligne.GetProvider() << endl ;
+        while (getline(fic, maligne)) {
+            Provider provider(maligne);
+            providers.push_back(provider);
         }
         // Fermer le fichier après la Database
         fichiers.close();

@@ -31,12 +31,10 @@ class Attribute
 
 public:
 //----------------------------------------------------- Méthodes publiques
-string GetAttribute();
 string GetAttributeID();
 string GetUnit();
 string GetDescription();
 
-void AnalyserAttribute();
 void AfficherAttribute();
 
 //------------------------------------------------- Surcharge d'opérateurs
@@ -53,7 +51,7 @@ void AfficherAttribute();
     // Contrat :
     //
 
-    Attribute (string nomFichier);
+    Attribute (string UnAttribut);
     // Mode d'emploi :
     //
     // Contrat :
@@ -75,9 +73,6 @@ protected:
 string attributeID;
 string unit;
 string description;
-
-string attribute;
-
 
 };
 

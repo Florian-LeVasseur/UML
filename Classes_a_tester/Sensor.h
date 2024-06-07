@@ -31,12 +31,11 @@ class Sensor
 
 public:
 //----------------------------------------------------- Méthodes publiques
-string GetSensor();
+
 string GetSensorID();
 float GetLatitude();
 float GetLongitude();
 
-void AnalyserSensor();
 void AfficherSensor();
 
 //------------------------------------------------- Surcharge d'opérateurs
@@ -53,7 +52,7 @@ void AfficherSensor();
     // Contrat :
     //
 
-    Sensor (string nomsSensor);
+    Sensor (string OneSensor);
     // Mode d'emploi :
     //
     // Contrat :
@@ -75,9 +74,6 @@ protected:
 string sensorID;
 float latitude;
 float longitude;
-
-string sensor;
-
 
 };
 

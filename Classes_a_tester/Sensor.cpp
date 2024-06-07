@@ -24,10 +24,6 @@ using namespace std;
 
 //----------------------------------------------------- Méthodes publiques
 
-string Sensor::GetSensor(){
-    return sensor;
-}
-
 string Sensor::GetSensorID(){
     return sensorID;
 }
@@ -37,24 +33,6 @@ float Sensor::GetLatitude(){
 }
 float Sensor::GetLongitude(){
     return longitude;
-}
-
-void Sensor::AnalyserSensor(){
-
-    // Séparation de la chaine Sensor en sous-chaînes
-    size_t debutSensorID = 0;
-    size_t finSensorID = sensor.find_first_of(';');
-
-    size_t debutLatitude = finSensorID + 1;
-    size_t finLatitude = sensor.find(';', debutLatitude);
-
-    size_t debutLongitude = finLatitude + 1;
-    size_t finLongitude = sensor.find_last_of(';');
-
-    // Extraction des sous-chaînes
-    sensorID = sensor.substr(debutSensorID, finSensorID - debutSensorID);
-    latitude = stof(sensor.substr(debutLatitude, finLatitude - debutLatitude));
-    longitude = stof(sensor.substr(debutLongitude, finLongitude - debutLongitude));
 }
 
 void Sensor::AfficherSensor(){
@@ -85,13 +63,27 @@ Sensor::Sensor ( const Sensor & unSensor )
 } //----- Fin de Sensor (constructeur de copie)
 
 
-Sensor::Sensor ( string nomSensor)
+Sensor::Sensor ( string OneSensor)
 // Algorithme :
 //
 {
 #ifdef MAP
     cout << "Appel au constructeur de <Sensor>" << endl;
 #endif
+// Séparation de la chaine Sensor en sous-chaînes
+    size_t debutSensorID = 0;
+    size_t finSensorID = OneSensor.find_first_of(';');
+
+    size_t debutLatitude = finSensorID + 1;
+    size_t finLatitude = OneSensor.find(';', debutLatitude);
+
+    size_t debutLongitude = finLatitude + 1;
+    size_t finLongitude = OneSensor.find_last_of(';');
+
+    // Extraction des sous-chaînes
+    sensorID = OneSensor.substr(debutSensorID, finSensorID - debutSensorID);
+    latitude = stof(OneSensor.substr(debutLatitude, finLatitude - debutLatitude));
+    longitude = stof(OneSensor.substr(debutLongitude, finLongitude - debutLongitude));
 } //----- Fin de Sensor
 
 

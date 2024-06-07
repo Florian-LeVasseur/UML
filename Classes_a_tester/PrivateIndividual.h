@@ -34,23 +34,16 @@ public:
     //
     // Contrat :
 
-    string GetPrivateIndividual();
     string GetUserID();
     string GetSensorID();
 
-    void AnalyserPrivateIndividual();
     void AfficherPrivateIndividual();
 
     int getFidelityPoints();
     bool getReliability();
 //-------------------------------------------- Constructeurs - destructeur
-    PrivateIndividual (string log, string pwd, string id);
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
-    PrivateIndividual (string monUser);
+    PrivateIndividual (string UnPrivateIndividual);
     // Mode d'emploi :
     //
     // Contrat :
@@ -68,8 +61,6 @@ protected:
 //----------------------------------------------------- Méthodes protégées
 string userID;
 string sensorID;
-
-string privateIndividual;
 
 int fidelityPoints;
 bool reliability;

@@ -33,11 +33,10 @@ public:
     // Mode d'emploi :
     //
     // Contrat :
-    string GetProvider();
+    
     string GetProviderID();
     string GetCleanerID();
 
-    void AnalyserProvider();
     void AfficherProvider();
 //-------------------------------------------- Constructeurs - destructeur
     Provider (string log, string pwd, string id);
@@ -46,7 +45,7 @@ public:
     // Contrat :
     //
 
-    Provider (string NomProvider);
+    Provider (string OneProvider);
     // Mode d'emploi :
     //
     // Contrat :
@@ -66,8 +65,6 @@ protected:
 //----------------------------------------------------- Attributs protégés
 string providerID ;
 string cleanerID;
-
-string provider;
 
 //-------------------------------- Autres définitions dépendantes de <Provider>
 };

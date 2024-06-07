@@ -24,10 +24,6 @@ using namespace std;
 
 //----------------------------------------------------- Méthodes publiques
 
-string Attribute::GetAttribute(){
-    return attribute;
-}
-
 string Attribute::GetAttributeID(){
     return attributeID;
 }
@@ -37,24 +33,6 @@ string Attribute::GetUnit(){
 }
 string Attribute::GetDescription(){
     return description;
-}
-
-void Attribute::AnalyserAttribute(){
-
-    // Séparation de la chaine attribute en sous-chaînes
-    size_t debutID = 0;
-    size_t finID = attribute.find_first_of(';');
-
-    size_t debutUnit = finID + 1;
-    size_t finUnit = attribute.find(';', debutUnit);
-
-    size_t debutDescription = finUnit + 1;
-    size_t finDescription = attribute.find_last_of(';');
-
-    // Extraction des sous-chaînes
-    attributeID = attribute.substr(debutID, finID - debutID);
-    unit = attribute.substr(debutUnit, finUnit - debutUnit);
-    description = attribute.substr(debutDescription, finDescription - debutDescription);
 }
 
 void Attribute::AfficherAttribute(){
@@ -85,13 +63,27 @@ Attribute::Attribute ( const Attribute & unAttribute )
 } //----- Fin de Attribute (constructeur de copie)
 
 
-Attribute::Attribute ( string nomFichier)
+Attribute::Attribute ( string OneAttribute)
 // Algorithme :
 //
 {
 #ifdef MAP
     cout << "Appel au constructeur de <Attribute>" << endl;
 #endif
+ // Séparation de la chaine attribute en sous-chaînes
+    size_t debutID = 0;
+    size_t finID = OneAttribute.find_first_of(';');
+
+    size_t debutUnit = finID + 1;
+    size_t finUnit = OneAttribute.find(';', debutUnit);
+
+    size_t debutDescription = finUnit + 1;
+    size_t finDescription = OneAttribute.find_last_of(';');
+
+    // Extraction des sous-chaînes
+    attributeID = OneAttribute.substr(debutID, finID - debutID);
+    unit = OneAttribute.substr(debutUnit, finUnit - debutUnit);
+    description = OneAttribute.substr(debutDescription, finDescription - debutDescription);
 } //----- Fin de Attribute
 
 

@@ -31,30 +31,12 @@ using namespace std;
 //{
 //} //----- Fin de Méthode
 
-string Provider::GetProvider(){
-    return provider;
-}
-
 string Provider::GetProviderID(){
     return providerID;
 }
 
 string Provider::GetCleanerID(){
     return cleanerID;
-}
-
-void Provider::AnalyserProvider(){
-
-    // Séparation de la chaine Provider en sous-chaînes
-    size_t debutProviderID = 0;
-    size_t finProviderID = provider.find_first_of(';');
-
-    size_t debutCleanerID = finProviderID + 1;
-    size_t finCleanerID = provider.find_last_of(';');
-
-    // Extraction des sous-chaînes
-    providerID = provider.substr(debutProviderID, finProviderID - debutProviderID);
-    cleanerID = provider.substr(debutCleanerID, finCleanerID - debutCleanerID);
 }
 
 void Provider::AfficherProvider(){
@@ -74,11 +56,21 @@ Provider::Provider (string log,string pwd,string id):User(log,pwd), providerID(i
 #endif
 } //----- Fin de Provider
 
-Provider::Provider (string NomProvider)
+Provider::Provider (string OneProvider)
 {
 #ifdef MAP
     cout << "Appel au constructeur de <Provider>" << endl;
 #endif 
+// Séparation de la chaine Provider en sous-chaînes
+    size_t debutProviderID = 0;
+    size_t finProviderID = OneProvider.find_first_of(';');
+
+    size_t debutCleanerID = finProviderID + 1;
+    size_t finCleanerID = OneProvider.find_last_of(';');
+
+    // Extraction des sous-chaînes
+    providerID = OneProvider.substr(debutProviderID, finProviderID - debutProviderID);
+    cleanerID = OneProvider.substr(debutCleanerID, finCleanerID - debutCleanerID);
 }
 
 Provider::~Provider ()

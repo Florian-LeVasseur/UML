@@ -30,10 +30,6 @@ using namespace std;
 //
 //{
 //} //----- Fin de Méthode
-string PrivateIndividual::GetPrivateIndividual(){
-    return privateIndividual;
-}
-
 string PrivateIndividual::GetUserID(){
     return userID;
 }
@@ -50,20 +46,6 @@ bool PrivateIndividual::getReliability(){
     return reliability;
 }
 
-void PrivateIndividual::AnalyserPrivateIndividual(){
-
-    // Séparation de la chaine PrivateIndividual en sous-chaînes
-    size_t debutUserID = 0;
-    size_t finUserID = privateIndividual.find_first_of(';');
-
-    size_t debutSensorID = finUserID + 1;
-    size_t finSensorID = privateIndividual.find_last_of(';');
-
-    // Extraction des sous-chaînes
-    userID = privateIndividual.substr(debutUserID, finUserID - debutUserID);
-    sensorID = privateIndividual.substr(debutSensorID, finSensorID - debutSensorID);
-}
-
 void PrivateIndividual::AfficherPrivateIndividual(){
     cout << "UserID : " << userID << endl;
     cout << "SensorID : " << sensorID << endl;
@@ -71,22 +53,26 @@ void PrivateIndividual::AfficherPrivateIndividual(){
 //-------------------------------------------- Constructeurs - destructeur
 
 
-PrivateIndividual::PrivateIndividual (string log, string pwd,string id): User(log,pwd), userID(id), fidelityPoints(0), reliability(true)
+PrivateIndividual::PrivateIndividual (string OnePrivateIndividual): User()
 // Algorithme :
 //
 {
 #ifdef MAP
     cout << "Appel au constructeur de <PrivateIndividual>" << endl;
 #endif
-} //----- Fin de PrivateIndividual
+// Séparation de la chaine OnePrivateIndividual en sous-chaînes
+    size_t debutUserID = 0;
+    size_t finUserID = OnePrivateIndividual.find_first_of(';');
 
-PrivateIndividual::PrivateIndividual (string id): User(), userID(id), fidelityPoints(0), reliability(true)
-// Algorithme :
-//
-{
-#ifdef MAP
-    cout << "Appel au constructeur de <PrivateIndividual>" << endl;
-#endif
+    size_t debutSensorID = finUserID + 1;
+    size_t finSensorID = OnePrivateIndividual.find_last_of(';');
+
+    // Extraction des sous-chaînes
+    userID = OnePrivateIndividual.substr(debutUserID, finUserID - debutUserID);
+    sensorID = OnePrivateIndividual.substr(debutSensorID, finSensorID - debutSensorID);
+    fidelityPoints = 0;
+    reliability = true;
+
 } //----- Fin de PrivateIndividual
 
 
