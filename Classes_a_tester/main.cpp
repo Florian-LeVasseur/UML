@@ -69,10 +69,20 @@ int main(){
                     break;
                 }
                 case 5: { //malicious personal user
-                    int indivId; 
+                    string indivId; 
                     cout<<"Choice : analyze the efficiency of an air cleaner"<<endl; 
                     cout<<"Enter the individual ID : "; 
                     cin >> indivId; 
+
+                    vector <Measurement> privateMeasure = Controler::SensorDataPrivateUser(string UserId); 
+                    if (! privateMeasure.empty())
+                    {
+                        cout<<privateMeasure<<endl; 
+                    }
+                    else
+                    {
+                        cout<<"No measure for this private sensor"<<endl; 
+                    }
                     
                     break; 
                 }

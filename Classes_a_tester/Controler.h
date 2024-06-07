@@ -39,6 +39,7 @@ public:
 
     int askPoint(string providerId);
     int askMeanSensor(string sensorId);
+    vector <Measurement> SensorDataPrivateUser(string UserId); 
     
 //-------------------------------------------- Constructeurs - destructeur
 

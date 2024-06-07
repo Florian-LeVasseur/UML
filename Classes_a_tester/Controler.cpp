@@ -13,7 +13,7 @@
 //-------------------------------------------------------- Include système
 using namespace std;
 #include <iostream>
-#include <cstring>
+#include <string>
 
 //------------------------------------------------------ Include personnel
 #include "Controler.h"
@@ -22,6 +22,43 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
+vector <Measurement> Controler::SensorDataPrivateUser(string UserId)
+{
+    vector<Measurement> mesures; 
+    //find PivateUser by Id
+    vector <PrivateIndividual> pvUsers = db -> GetPrivateIndivs(); 
+    PrivateIndividual * pvUser; 
+    for (int i=0; i<pvUser.size(); i++)
+    {
+        if (pvUsers[i].GetUserID() == UserId) 
+        {
+            pvUser = new PrivateIndividual; 
+            *pvUser=pvUsers[i];
+            break; 
+        }
+    }
+    if (pvUser == NULL)
+    {
+        cout<<"pas de Private Individual trouvé à cette adresse"<<endl; 
+    }
+    else 
+    {
+        //find sensorID
+        string sensorIdPv = *pvUser.GetSensorID();
+        // find all measure related to the sensorId
+        vector<Measurement> allMeasures = db -> GetMeasurements(); 
+        for (int i=0; i<allMeasures.size(); i++)
+        {
+            if (allMeasures[i].GetSensorID() == sensorIdPv)
+            {
+                mesures.push_back(allMeasures[i]); 
+            }
+        }
+    }
+
+    delete pvUser; 
+    return mesures; 
+}
 // type Controler::Méthode ( liste des paramètres )
 // Algorithme :
 //
