@@ -38,6 +38,7 @@ int main(){
                 cout<<"2: Identify areas with similar air quality"<<endl;
                 cout<<"3: Analyze air quality around air cleaner"<<endl;
                 cout<<"4: Analyze private individual's sensor"<<endl;
+                cout<<"5: Identify a malicious personal user"<<endl; 
                 cout<<"0: Deconnexion"<< endl;
                 if (!(cin >> ActionAgence)) {
                     // En cas d'échec de la saisie, on vide le tampon et on ignore la ligne
@@ -47,20 +48,34 @@ int main(){
                 switch(ActionAgence){
                 
                 case 0: {   // Quitter
+                    cout<<"Déconnexion"<<endl; 
                     break;
                 }
                 case 1: {   // 
-                    
+                    cout<<"Choice : Analyse air quality"<<endl; 
                     break;
                 }
                 case 2:{    // 
-                    
+                    cout<<"Choice : Identify areas with similar air quality"<<endl; 
                     break;
                 }
                 case 3: {   //
-
+                    cout<<"Choice : Analyze air quality around air cleaner"<<endl; 
                     break;
                 }
+                case 4: {   //
+                    cout<<"Choice : Analyze private individual's sensor"<<endl; 
+                    break;
+                }
+                case 5: { //malicious personal user
+                    int indivId; 
+                    cout<<"Choice : analyze the efficiency of an air cleaner"<<endl; 
+                    cout<<"Enter the individual ID : "; 
+                    cin >> indivId; 
+                    
+                    break; 
+                }
+
                 default: {  // Si la saisie n'est pas correcte
                     cout<<"Veuillez selectionner une des options proposées"<<endl;
                     cin.clear();
@@ -126,6 +141,7 @@ int main(){
                 switch(ActionPrivateIndividual){
                 
                 case 0: {   // Quitter
+                
                     break;
                 }
                 case 1: {   // 

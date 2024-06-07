@@ -18,12 +18,17 @@ using namespace std;
 //------------------------------------------------------ Include personnel
 #include "GovAgency.h"
 #include "User.h"
+#include "dataBase.h"
 
 //------------------------------------------------------------- Constantes
 
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
+vector <Measurement> GovAgency::dataSensorUser ( int idUser ){
+    vector <Measurement> measure = Database::GetMeasurements(); 
+    
+}
 // type GovAgency::Méthode ( liste des paramètres )
 // Algorithme :
 //

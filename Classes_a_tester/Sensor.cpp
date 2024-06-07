@@ -16,6 +16,7 @@ using namespace std;
 #include <string>
 //------------------------------------------------------ Include personnel
 #include "Sensor.h"
+#include "Database.h"
 
 
 //------------------------------------------------------------- Constantes
@@ -35,17 +36,12 @@ float Sensor::GetLongitude(){
     return longitude;
 }
 
+
 void Sensor::AfficherSensor(){
     cout << "SensorID : " << sensorID << endl;
     cout << "Latitude : " << latitude << endl;
     cout << "Longitude : " << longitude << endl;
 }
-
-// type Sensor::Méthode ( liste des paramètres )
-// Algorithme :
-//
-//{
-//} //----- Fin de Méthode
 
 
 //------------------------------------------------- Surcharge d'opérateurs
