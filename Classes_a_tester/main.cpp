@@ -37,9 +37,11 @@ int main(){
                 cout<< "Select :"<< endl;
                 cout<<"1: Analyse air quality"<<endl;
                 cout<<"2: Identify areas with similar air quality"<<endl;
-                cout<<"3: Analyze air quality around air cleaner"<<endl;
-                cout<<"4: Analyze private individual's sensor"<<endl;
-                cout<<"5: Identify a malicious personal user"<<endl; 
+                cout<<"3: Analyze air quality around air cleaner (mean) at a given moment"<<endl;
+                cout<<"4: Analyze air quality around air cleaner (mean) for a specified period of time"<<endl;
+                cout<<"5: Ask for private individual's sensor informations"<<endl; 
+                cout<<"6: Identify a malicious personal user"<<endl; 
+                cout<<"7: Exclude a privateIndividual"<<endl; 
                 cout<<"0: Deconnexion"<< endl;
                 if (!(cin >> ActionAgence)) {
                     // En cas d'échec de la saisie, on vide le tampon et on ignore la ligne
@@ -68,9 +70,29 @@ int main(){
                     cout<<"Choice : Analyze private individual's sensor"<<endl; 
                     break;
                 }
-                case 5: { //malicious personal user
+                case 5: { //private individual's sensor information
+                    cout<<"Choice : Ask for private individual's sensor informations"<<endl; 
                     string indivId; 
-                    cout<<"Choice : MALICIOUS"<<endl; 
+                    cout<<"Enter the individual ID : "; 
+                    cin >> indivId; 
+
+                    vector <Measurement> privateMeasure = controler.SensorDataPrivateUser(indivId); 
+                    if (! privateMeasure.empty())
+                    {
+                        for (int i = 0 ; i < privateMeasure.size() ; i++)
+                            privateMeasure[i].AfficherMeasurement(); 
+                    }
+                    break; 
+                }
+
+                case 6 : { 
+                    cout<<"Choice : Identify a malicious personal user"<<endl;
+                    break; 
+                }
+
+                case 7 : { 
+                    cout<<"Choice : Exclude a privateIndividual"<<endl;
+                    string indivId; 
                     cout<<"Enter the individual ID : "; 
                     cin >> indivId; 
 
