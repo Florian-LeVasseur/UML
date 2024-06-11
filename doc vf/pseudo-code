@@ -1,0 +1,105 @@
+PROCÉDURE IndiceATMO(float indiceO3, float indiceSO2, float indiceNO2, float indicePM10)
+	ENTRÉES : réel indiceO3
+		  réel indiceSO2
+		  réel indiceNO2
+		  réel indicePM10
+	SORTIES : chaine de caractère niveau_qualité
+	PRÉ-CONDITION : tous les indices sont >=0
+	POSTCONDITION : niveau_qualité renvoie un des 6 niveaux : "Très bon", "Bon", "Moyen", "Médiocre", "Mauvais", "Très Mauvais"
+	DÉCLARATION : entier indice_atmo
+	DÉBUT 
+		Si 0=<indiceO3=<29 & 0=<indiceSO2=<39 & 0=<indiceNO2=<29 & 0=<indicePM10=<6 alors
+			indice_atmo = 1 
+		Si 30=<indiceO3=<54 & 40=<indiceSO2=<79 & 30=<indiceNO2=<54 & 7=<indicePM10=<13 alors
+			indice_atmo = 2
+		Si 55=<indiceO3=<79 & 80=<indiceSO2=<119 & 55=<indiceNO2=<84 & 14=<indicePM10=<20 alors
+			indice_atmo = 3 
+		Si 80=<indiceO3=<104 & 120=<indiceSO2=<159 & 85=<indiceNO2=<109 & 21=<indicePM10=<27 alors
+			indice_atmo = 4
+		Si 105=<indiceO3=<129 & 160=<indiceSO2=<199 & 110=<indiceNO2=<134 & 28=<indicePM10=<34 alors
+			indice_atmo = 5
+		Si 130=<indiceO3=<149 & 200=<indiceSO2=<249 & 135=<indiceNO2=<164 & 35=<indicePM10=<41 alors
+			indice_atmo = 6
+		Si 150=<indiceO3=<179 & 250=<indiceSO2=<299 & 165=<indiceNO2=<199 & 42=<indicePM10=<49 alors
+			indice_atmo = 7
+		Si 180=<indiceO3=<209 & 300=<indiceSO2=<399 & 200=<indiceNO2=<274 & 50=<indicePM10=<64 alors
+			indice_atmo = 8
+		Si 210=<indiceO3=<239 & 400=<indiceSO2=<499 & 275=<indiceNO2=<399 & 65=<indicePM10=<79 alors
+			indice_atmo = 9
+		Si indiceO3>=240 & indiceSO2>=500 & indiceNO2>=400 & indicePM10>=80 alors
+			indice_atmo = 10
+
+PROCÉDURE AirQualityInCircularArea(int latitude, int longitude, int start, int end)
+	ENTRÉES : entier latitude
+		  entier longitude
+		  entier start
+		  entier end
+	SORTIES : chaine de caractère niveau_qualité
+	PRÉ-CONDITION : on a bien toutes les données de tous les capteurs chargées dans la data_base
+	POSTCONDITION : qualité renvoie un des 6 niveaux : "Très bon", "Bon", "Moyen", "Médiocre", "Mauvais", "Très Mauvais"
+	DÉCLARATION : const entier rayon = 10
+		      réel x_centre
+		      réel y_centre
+		      réel x_mesure
+		      réel y_mesure
+		      entier[] donnees_O3
+		      entier[] donnees_SO2
+		      entier[] donnees_NO2
+		      entier[] donnees_PM10
+		      entier somme = 0
+		      réel moyenneO3
+		      réel moyenneSO2
+		      réel moyenneNO2
+		      réel moyennePM10
+		      const capteur[] donnees_capteur = tous les capteurs recensé dans la data_base
+		      const taille_data_base = lenght(donnees_capteur)
+	DÉBUT 
+		x_centre = cos(latitude) * cos(longitude)
+    		y_centre = cos(latitude) * sin(longitude)
+    		
+    		Pour (cpt<-0; cpt<taille_data_base; cpt<-cpt+1) faire
+    			Si start<donnees_capteur[cpt].date<end alors 
+           			x_mesure = cos(donnees_capteur[cpt].latitude) * cos(donnees_capteur[cpt].longitude)
+            			y_mesure = cos(donnees_capteur[cpt].latitude) * sin(donnees_capteur[cpt].longitude)
+			distance = sqrt((x_mesure - x_centre)^2 + (y_mesure - y_centre)^2)
+			Si distance<rayon alors
+				Si donnees_capteur[cpt].AttributID == "03" alors
+					donnees_O3 = donnees_O3 + donnees_capteur[cpt].value
+				Si donnees_capteur[cpt].AttributID == "SO2" alors
+					donnees_SO2 = donnees_SO2 + donnees_capteur[cpt].value
+				Si donnees_capteur[cpt].AttributID == "NO2" alors
+					donnees_NO2 = donnees_NO2 + donnees_capteur[cpt].value
+				Si donnees_capteur[cpt].AttributID == "PM10" alors
+					donnees_PM10 = donnees_PM10 + donnees_capteur[cpt].value
+		 
+		Pour (cptO3<-0; cptO3<donnees_O3; cptO3<-cptO3+1) faire
+			somme = somme + donnees_O3[cptO3]
+		moyenneO3=somme/cptO3
+		somme = 0
+		Pour (cptSO2<-0; cptSO2<donnees_SO2; cptSO2<-cptSO2+1) faire
+			somme = somme + donnees_SO2[cptSO2]
+		moyenneSO2=somme/cptSO2
+		somme = 0  
+		Pour (cptNO2<-0; cptNO2<donnees_NO2; cptNO2<-cptNO2+1) faire
+			somme = somme + donnees_NO2[cptNO2]
+		moyenneNO2=somme/cptNO2
+		somme = 0  
+		Pour (cptPM10<-0; cptPM10<donnees_PM10; cptPM10<-cptPM10+1) faire
+			somme = somme + donnees_PM10[cptPM10]
+		moyennePM10=somme/cptPM10
+		somme = 0
+		
+		indice_atmo = IndiceATMO(moyenneO3, moyenneSO2, moyenneNO2, moyennePM10)
+		
+		Si indice_atmo==1 ou atmo==2 alors
+			niveau_qualite="Très Bon"
+		Si indice_atmo==3 ou atmo==4 alors
+			niveau_qualite="Bon"
+		Si indice_atmo==5 alors
+			niveau_qualite="Moyen"
+		Si indice_atmo==6 ou atmo==7 alors
+			niveau_qualite="Médiocre"
+		Si indice_atmo==8 ou atmo==9 alors
+			niveau_qualite="Mauvais"
+		Si indice_atmo==10 alors
+			niveau_qualite="Très Mauvais"
