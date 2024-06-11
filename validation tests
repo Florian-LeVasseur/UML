@@ -1,0 +1,171 @@
+VALIDATION TESTS
+
+Test d’authentification (exigence sécurité) :
+
+	1) Connexion à l'application avec le bon nom d'utilisateur et le bon mdp
+	Description : vérifier que l'on se connecte bien à son compte en ayant accès au bonne fonctionnalité
+	Conditions préliminaires : le logiciel est en phase de fonctionnement
+	Etapes :
+		1- Sélectionner l'onglet "se connecter"
+		2- Sélectionner son statut
+		3- Entrer son nom d'utilisateur
+		4- Entrer son mdp 
+	Résultats attendus : on est bien connecté, l'application renvoie " connexion ok"
+    	Echec si : 
+    		-l'application renvoie "echec de connexion"
+    		-l'application renvoie "mauvais identifiant et/ou mdp"
+    		
+    	2) Déconnexion
+    	Description : reussir à se déconnecter quelque soit son statut
+	Conditions préliminaires : on a réussi à se connecter
+	Etapes :
+		1- Se connecter
+		2- Choisir la fonctionnalité "Deconnexion"p 
+	Résultats attendus : on est bien déconnecté, l'application renvoie "Bonne journée, à très vite"
+    	Echec si : 
+    		-l'application renvoie "echec de déconnexion"
+    		-il ne se passe rien
+    		
+Tests accès aux données (exigence sécurité) :
+	
+	1) Connexion en tant que gouvernement
+	Description : vérifier qu'on accède aux fonctionalitées offertes au gouvernement
+	Conditions préliminaires : la connexion a réussie
+	Etapes : 
+		1- Connexion réussie
+		2- Affichage des fonctionnalités
+	Résultats attendus : l'application doit renvoyer les fonctionnalités suivantes : 
+		"Select :
+		1: Analyse air quality
+		2: Analyze air quality around air cleaner
+		3: Analyze private individual's sensor
+		0: Deconnexion"
+	Echec si : 
+		- on ne renvoie pas les bonne fonctionnalitées
+		- il ne se passe rien
+		 		
+    	2) Connexion en tant que particulier
+	Description : vérifier qu'on accède aux fonctionalitées offertes aux particuliers
+	Conditions préliminaires : la connexion a réussie
+	Etapes : 
+		1- Connexion réussie
+		2- Affichage des fonctionnalités
+	Résultats attendus : l'application doit renvoyer les fonctionnalités suivantes : 
+		"Que voulez vous faire :
+		1: Afficher données de ses capteurs
+		2: Afficher points de fidélité
+		0: Deconnnexion"
+	Echec si : 
+		- on ne renvoie pas les bonne fonctionnalitées
+		- il ne se passe rien
+		
+	3) Connexion en tant que fournisseur
+	Description : vérifier qu'on accède aux fonctionalitées offertes aux fournisseurs
+	Conditions préliminaires : la connexion a réussie
+	Etapes : 
+		1- Connexion réussie
+		2- Affichage des fonctionnalités
+	Résultats attendus : l'application doit renvoyer les fonctionnalités suivantes : 
+		"Select :
+		1: Analyze air quality around air cleaner
+		0: Deconnexion"
+	Echec si : 
+		- on ne renvoie pas les bonne fonctionnalitées
+		- il ne se passe rien
+		
+Tests Fonctionnels :
+	1) Analyser la qualité de l'air autour d'un capteur choisi à une date choisie
+	Description : vérifier qu'on renvoie le bon chiffre ATMO
+	Conditions préliminaires : connexion en tant que gouvernement réussie
+	Etapes : 
+		1- Choisir de ce connecter en tant que gouvernement
+		2- Connexion réussie
+		3- Affichage des fonctionnalités
+		4- Sélectionner "Analyze air quality"
+	Résultats attendus : on veut que l'application renvoie les mesures du capteur, son sensorID ainsi que l'indication ATMO correctement calculé et la date
+	Echec si : 
+		- on ne renvoie pas les bonnes mesures du capteurs
+		- on ne renvoie pas le bon sensorID
+		- on ne renvoie pas la bonne date
+		- on ne renvoie pas le bon chiffre
+		- il ne se passe rien
+		 		
+	2) Analyser la qualité de l'air autour d'un airCleaner choisi à une date choisie
+	Description : doit renvoyer le rayon d'efficacité du airCleaner
+	Conditions préliminaires : connexion en tant que gouvernement ou fournisseurs réussie, si connexion entant que fournisseur il faut que le airCleaner choisi appartienne à ce fournisseur
+	Etapes : 
+		1- Choisir de ce connecter en tant que gouvernement/fournisseur
+		2- Connexion réussie
+		3- Affichage des fonctionnalités
+		4- Sélectionner "Analyze air quality around air cleaner"
+	Résultats attendus : on veut que l'application renvoie la date, le cleanerID, ainsi que le rayon d'efficacité du airCleaner
+	Echec si : 
+		- on ne renvoie pas le bon cleanerID
+		- on ne renvoie pas la bonne date
+		- on ne renvoie pas le bon rayon
+		- il ne se passe rien
+		
+	3) Analyser le capteur d'un particulier
+	Description : doit renvoyer les mesures du capteur et dire si il est fiable
+	Conditions préliminaires : connexion en tant que gouvernement réussie
+	Etapes : 
+		1- Choisir de ce connecter en tant que gouvernement
+		2- Connexion réussie
+		3- Affichage des fonctionnalités
+		4- Sélectionner "Analyze private individual's sensor"
+	Résultats attendus : on veut que l'application renvoie le sensorID et les mesures du capteur ainsi "capteur fiable" ou "particulier malveillant"
+	Echec si : 
+		- on ne renvoie pas le bon sensorID
+		- on ne renvoie pas les bonnes mesures
+		- on ne renvoie pas le bon indice de fiabilité
+		- il ne se passe rien
+		
+	4) Obtenir les données de ses propres capteur
+	Description : doit renvoyer les mesures de notre capteur
+	Conditions préliminaires : connexion en tant que particulier réussie
+	Etapes : 
+		1- Choisir de ce connecter en tant que particulier
+		2- Connexion réussie
+		3- Affichage des fonctionnalités
+		4- Sélectionner "Afficher données de ses capteurs"
+	Résultats attendus : on veut que l'application renvoie le sensorID et les mesures du capteur 
+	Echec si : 
+		- on ne renvoie pas le bon sensorID
+		- on ne renvoie pas les bonnes mesures
+		- il ne se passe rien		 		
+
+	5) Consulter ses points de fidélité
+	Description : doit renvoyer le nombre de points de fidélité qu'on possède
+	Conditions préliminaires : connexion en tant que particulier réussie
+	Etapes : 
+		1- Choisir de ce connecter en tant que particulier
+		2- Connexion réussie
+		3- Affichage des fonctionnalités
+		4- Sélectionner "Afficher points de fidélité"
+	Résultats attendus : on veut que l'application renvoie le nombre de points de fidélité que le particulier possède 
+	Echec si : 
+		- on ne renvoie pas le bon nombre
+		- il ne se passe rien
+
+Tests de Performance :
+
+	1)Performances de l'application
+	Description : ce test vise à évaluer la performance de l'application quelque soit la fonctionnalité choisie ou le type de connexion, l'objectif est de mesurer le temps de réponse de l'application et de vérifier sa stabilité.
+	Conditions préliminaires : l'application fonctionne, la base de données doit être en état initial avant le début du test.
+	Etapes : 
+		1- Se connecter
+		2- Choisir différentes fonctionnalitées
+		3- Enregistrer les temps de réponses
+	Résultats attendus : on veut que le temps de réponses de l'application ne dépasse pas les millisecondes 
+	Echec si : 
+		- on dépasse les millisecondes
+		 		
+		 		
+		 		
+		 		
+		 		
+		 		
+		 		
+		 		
+		 		
+		 		
