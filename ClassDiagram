@@ -1,7 +1,4 @@
- 
-
-@startuml 
-
+@startuml
 package View {
 
 class View {
@@ -31,22 +28,22 @@ class View {
 package Controler {
 
 class Controler {
+- db : Database*
 
-+ {method} askDataPrivateIndiv (PrivateIndividual individual) : List<Sensor>
++ {method} createDb(): void
++ {method} getDb() : Database*
++ {method} updateReliability(string UserId, bool isreliable) : Boolean
++ {method} checkIfEfficient(string cleanerId): Boolean
++ {method} SensorDataPrivateUser(string UserId) : Vector<Measurement>
++ {method} checkIfReliable(string userID, string timeStart, string timeStop) : Boolean
 
-+ {method} excludeIndividual (PrivateIndividual individual) : PrivateIndividual 
+# {method}stringToTimeT(string& dateStr) : Timestamps
 
-+ {method} meanCicleMoment (Float latitude, Float longitude, Timestamp moment) : Float
+# {method} compareDates(time_t date1, time_t date2) : Boolean
+# {method}getMeasurementsBetweenDates(vector<Measurement> Measurements, string sensorName, string attributeID, time_t startDate, time_t endDate) : Vector<Measurement> 
+# {method}sortSensorsByDistance( vector<Sensor> sensors,  Cleaner cleaner): Vector<Sensor> 
+# {method}CalculateAtmoIndex (float O3, float NO2, float SO2, float PM10): Float
 
-+ {method} meanCiclePeriod (Float latitude, Float longitude, Timestamp start, Timestamp stop) : Float 
-
-+ {method} qualityCloseSensor (Sensor sensor, Timestamp start, Timestamp stop) : List<Sensor>
-
-+ {method} getAirQuality (Float latitude, Float longitude, Timestamp moment) : Float
-
-+ {method} askPoint () : Int
-
-+{method} askMeanSensor (Sensor sensor) : Int
 
 }
 
@@ -58,7 +55,7 @@ class Controler {
 package Model {
 
 
-class Government { 
+class GovAgency { 
 
 } 
 
@@ -77,9 +74,15 @@ class User {
 
 class Provider { 
  
-# providerId : String
+-providerID : String
 
-+ {method} getProviderId() : String
+-cleanerID : STring
+
++ {method} GetProviderID() : String
+
++{method} GetCleanerID() : String
+
++{method} AfficherProvider() : void
 
 }
 
@@ -87,35 +90,49 @@ class Provider {
 
 class Sensor{
 
-# sensorId : String 
+-sensorID : String 
  
-# longitude : Float
+-longitude : Float
 
-#latitude : Float
+-latitude : Float
 
-+{method} getSensorId() : String
++{method} GetSensorID() : String
 
-+{method} getLongitude() : Float
++{method} GetLongitude() : Float
 
-+{method} getLatitude() : Float
++{method} GetLatitude() : Float
 }
 
 class Measurement {
- #time : Timestamp
+-timestamp : String
 
- #value : Float 
+-sensorID : String
 
-+{method} getTime() : Timestamp
+-attributID : String
 
-+{method} getValue() : Float
+-date : Timestamp
+
+-value : Float 
+
++{method} GetTimestamp() : String
+
++{method} GetSensorID() : String
+
++{method} GetAttributID() : String
+
++{method} GetValue() : Float
+
++{method} GetDate() : Timestamp
+
++{method} AfficherMeasurement() : void
 }
 
 class Attribute {
-#attributeId : String
+-attributeId : String
 
-#unit : String
+-unit : String
 
-#desciption : String
+-desciption : String
 
 +{method} getAttributeId() : String
 
@@ -127,18 +144,18 @@ class Attribute {
 
 class Cleaner {
 
-#cleanerId : String
+-cleanerID : String
 
-#latitude : LongFloat
+-latitude : Float
 
-#longitude : Int
+-longitude : Float
 
-#timestampStart : Timestamp
+-timestampStart : Timestamp
 
-#timestampStop : Timestamp
+-timestampStop : Timestamp
 
 
-+{method} getCleanerId() : String
++{method} getCleanerID() : String
 
 +{method} getLatitude() : Float
 
@@ -152,11 +169,11 @@ class Cleaner {
 
 
 class PrivateIndividual { 
-#privateIndividualId : String
+-privateIndividualId : String
 
- #fidelityPoint : Int
+-fidelityPoint : Int
 
-#reliable : Boolean
+-reliable : Boolean
 
 +{method} getPrivateIndividualId() : String
 
@@ -166,57 +183,42 @@ class PrivateIndividual {
 
 } 
 
-  
-
-class Timestamp {
-#day : String
-
-#time : String
-
-+{method} getDay() : String
-
-+{method} getTime() : String
-}
-
 class DataBase{
-+{method} getProviderById(String providerId) : Provider
 
-+{method} getProviderByIndex(Int i) : Provider
+-sensors : Vector<Sensor>
 
-+{method} getPrivateIndividualById(String privateIndividualId) : PrivateIndividual
+-measurements : Vector<Measurement>
 
-+{method} getPrivateIndividualByIndex(Int i) : PrivateIndividual
+-attributes : Vector<Attribute>
 
-+{method} getSensorById(String sensorId) : Sensor
+-cleaners : Vector<Cleaner>
 
-+{method} getSensorByIndex(Int i) : Sensor
+-privateIndivs : Vector<PrivateIndividual> 
 
-+{method} creationBD () : Boolean 
+-providers : Vector<Provider>
+
++{method} GetSensors() : vector<Sensor>
+
++{method} GetMeasurements() : vector<Measurement>
+
++{method} GetAttributes(): vector<Attribute>
+
++{method} GetCleaners() : vector<Cleaner>
+
++{method} GetPrivatesIndivs() : vector<PrivateIndividual>
+
++{method} GetProviders(): vector<Provider>
+
++{method} updatePrivateIndivReliability() : Boolean 
 }
 
   
 }
 
-
-  
-
-
-
-
-  
-
-
-
-
-@enduml 
-
-  
-
-@startuml 
 
 User <|-- Provider : Héritage 
 
-User <|-- Government : Héritage 
+User <|-- GovAgency : Héritage 
 
 User <|-- PrivateIndividual : Héritage 
 
@@ -239,6 +241,4 @@ DataBase "1" --> "*" Attribute
 DataBase "1" --> "*" PrivateIndividual
 
 DataBase "1" --> "*" Provider
-
-@enduml 
-
+@enduml
