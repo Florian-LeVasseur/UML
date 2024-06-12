@@ -179,12 +179,6 @@ class Timestamp {
 }
 
 class DataBase{
-# provider : List<Provider>
-
-# privateIndividuals : List<Provider>
-
-# sensors : List<Sensor> 
-
 +{method} getProviderById(String providerId) : Provider
 
 +{method} getProviderByIndex(Int i) : Provider
@@ -234,6 +228,17 @@ Provider "1" --> "*" Cleaner
 
 PrivateIndividual "1" --> "*" Sensor 
 
-@enduml 
+DataBase "1" --> "*" Sensor 
 
+DataBase "1" --> "*" Measurement 
+
+DataBase "1" --> "*" Cleaner
+
+DataBase "1" --> "*" Attribute
+
+DataBase "1" --> "*" PrivateIndividual
+
+DataBase "1" --> "*" Provider
+
+@enduml 
 
